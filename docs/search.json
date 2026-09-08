@@ -4,13 +4,48 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "I bridge the gap between complex engineering systems and data-driven solutions. With a background in Biomedical Engineering, I transitioned into Data Science and have spent the last decade leading high-impact projects across biomedical, energy, finance, and real estate industries.\nThroughout my career, I’ve tackled diverse challenges, from building human brain models and automating drilling operations to engineering enterprise-scale data quality systems, performing root cause analysis, and training AI models.\nTo dive deeper into my work or connect, check out my LinkedIn link on the home page."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "I bridge the gap between complex engineering systems and data-driven solutions. With a background in Biomedical Engineering, I transitioned into Data Science and have spent the last decade leading high-impact projects across biomedical, energy, finance, and real estate industries.\nThroughout my career, I’ve tackled diverse challenges, from building human brain models and automating drilling operations to engineering enterprise-scale data quality systems, performing root cause analysis, and training AI models.\nTo dive deeper into my work or connect, check out my LinkedIn link on the home page."
+  },
+  {
+    "objectID": "about.html#why-data-science",
+    "href": "about.html#why-data-science",
+    "title": "About",
+    "section": "Why Data Science",
+    "text": "Why Data Science\nI’ve always been driven by the power of Data Science, but seeing it in action across industry transformed that passion into a purpose. A single well-crafted algorithm has the power to drive massive, real-world impact. In oil and gas, it means optimizing drilling parameters to save millions of dollars and prevent costly operational failures. In banking, it means building automated data quality systems that protect millions from financial loss while elevating the customer experience. For me, data science isn’t just about code—it’s about engineering solutions that reshape how entire industries operate."
+  },
+  {
+    "objectID": "about.html#hobbies",
+    "href": "about.html#hobbies",
+    "title": "About",
+    "section": "Hobbies",
+    "text": "Hobbies\nOutside of work, I stay active and love being in nature. You’ll usually find me hiking, biking, kayaking, running, or camping. I also have a dog named Kaaju, who gets spoiled with plenty of outdoor adventures and treats."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Kshitij Agarwal",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Results-driven Data Scientist with 10+ years of experience delivering end-to-end AI, machine learning, and data engineering solutions across biotech, finance, and energy. Expertise in building scalable data pipelines, predictive models, and LLM applications using Python, SQL, GCP, and Airflow. Skilled at bridging complex technical innovation with strategic business outcomes to drive crossindustry decision-making."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Kshitij Agarwal",
+    "section": "Education",
+    "text": "Education\n\nUniversity of British Columbia\nVancouver, BC | M.Sc. in Data Science | Aug 2026 - June 2027\n\n\nUniversity of Alberta\nEdmonton, AB | M.Sc. in Biomedical Engineering | Sept 2016 - Aug 2018\n\n\nIndian Institute of Technology Kanpur\nKanpur, UP | B.Tech in Biological Sciences and Bioengineering & Electrical Engineering | Aug 2011 - Aug 2016"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Kshitij Agarwal",
+    "section": "Experience",
+    "text": "Experience\n\nScotiabank\nManager, Data Quality | June 2022 - July 2024\n\n\nPason Systems Inc.\nResearch Engineer | Aug 2018 - June 2022\n\n\nEXL (client-American Express)\nSenior Consultant | Feb 2025 - June 2025\n\n\nTuring Enterprises Inc.\nAI developer | June 2025 - Sep 2025"
   }
 ]

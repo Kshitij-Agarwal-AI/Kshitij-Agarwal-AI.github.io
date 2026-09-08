@@ -1,7 +1,45 @@
 ---
 title: "Kshitij Agarwal"
+about:
+  template: solana
+  image: images/profile_pic.jpg
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/kshitij-agarwal/
+    - icon: github
+      text: Github
+      href: https://github.com/Kshitij-Agarwal-AI
 ---
 
-This is a Quarto website.
+Results-driven Data Scientist with 10+ years of experience delivering end-to-end
+AI, machine learning, and data engineering solutions across biotech, finance,
+and energy. Expertise in building scalable data pipelines, predictive models, and
+LLM applications using Python, SQL, GCP, and Airflow. Skilled at bridging
+complex technical innovation with strategic business outcomes to drive crossindustry
+decision-making.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Education
+
+#### University of British Columbia 
+Vancouver, BC | M.Sc. in Data Science | Aug 2026 - June 2027
+
+#### University of Alberta 
+Edmonton, AB | M.Sc. in Biomedical Engineering | Sept 2016 - Aug 2018
+
+#### Indian Institute of Technology Kanpur 
+Kanpur, UP | B.Tech in Biological Sciences and Bioengineering & Electrical Engineering | Aug 2011 - Aug 2016
+
+## Experience
+
+#### Scotiabank 
+Manager, Data Quality | June 2022 - July 2024
+
+#### Pason Systems Inc.
+Research Engineer | Aug 2018 - June 2022
+
+#### EXL (client-American Express)
+Senior Consultant | Feb 2025 - June 2025
+
+#### Turing Enterprises Inc.
+AI developer | June 2025 - Sep 2025
