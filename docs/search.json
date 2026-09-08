@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kshitij Agarwal",
+    "section": "",
+    "text": "Results-driven Data Scientist with 10+ years of experience delivering end-to-end AI, machine learning, and data engineering solutions across biotech, finance, and energy. Expertise in building scalable data pipelines, predictive models, and LLM applications using Python, SQL, GCP, and Airflow. Skilled at bridging complex technical innovation with strategic business outcomes to drive crossindustry decision-making."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Kshitij Agarwal",
+    "section": "Education",
+    "text": "Education\n\nUniversity of British Columbia\nVancouver, BC | M.Sc. in Data Science | Aug 2026 - June 2027\n\n\nUniversity of Alberta\nEdmonton, AB | M.Sc. in Biomedical Engineering | Sept 2016 - Aug 2018\n\n\nIndian Institute of Technology Kanpur\nKanpur, UP | B.Tech in Biological Sciences and Bioengineering & Electrical Engineering | Aug 2011 - Aug 2016"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Kshitij Agarwal",
+    "section": "Experience",
+    "text": "Experience\n\nScotiabank\nManager, Data Quality | June 2022 - July 2024\n\n\nPason Systems Inc.\nResearch Engineer | Aug 2018 - June 2022\n\n\nEXL (client-American Express)\nSenior Consultant | Feb 2025 - June 2025\n\n\nTuring Enterprises Inc.\nAI developer | June 2025 - Sep 2025"
+  },
+  {
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "Waterfront, Vancouver, BC, Canada\n\n\nThe first few weeks of the Master of Data Science (MDS) program have been an incredible experience. As a newcomer to Vancouver, this program is giving me the perfect opportunity to explore and settle into this beautiful city. Just recently, I took a walk along the downtown waterfront, and it was stunning. There is nothing quite like a peaceful stroll right along the edge of the Pacific Ocean to clear your mind.\nBack on campus, the MDS orientation set a great tone for the months ahead. It was structured so thoughtfully that all the new information felt manageable rather than overwhelming. The best part? Meeting my classmates. Everyone comes from such diverse backgrounds, and I am genuinely excited to learn alongside them throughout the program.\nOne thing that surprised me is just how established the MDS program is. Knowing that there is a large, active network of alumni working across so many different industries gives me a huge confidence boost. I am really looking forward to connecting with them and learning from their real-world experiences.\nHere’s to the next chapter!"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -26,26 +61,5 @@
     "title": "About",
     "section": "Hobbies",
     "text": "Hobbies\nOutside of work, I stay active and love being in nature. You’ll usually find me hiking, biking, kayaking, running, or camping. I also have a dog named Kaaju, who gets spoiled with plenty of outdoor adventures and treats."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Kshitij Agarwal",
-    "section": "",
-    "text": "Results-driven Data Scientist with 10+ years of experience delivering end-to-end AI, machine learning, and data engineering solutions across biotech, finance, and energy. Expertise in building scalable data pipelines, predictive models, and LLM applications using Python, SQL, GCP, and Airflow. Skilled at bridging complex technical innovation with strategic business outcomes to drive crossindustry decision-making."
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Kshitij Agarwal",
-    "section": "Education",
-    "text": "Education\n\nUniversity of British Columbia\nVancouver, BC | M.Sc. in Data Science | Aug 2026 - June 2027\n\n\nUniversity of Alberta\nEdmonton, AB | M.Sc. in Biomedical Engineering | Sept 2016 - Aug 2018\n\n\nIndian Institute of Technology Kanpur\nKanpur, UP | B.Tech in Biological Sciences and Bioengineering & Electrical Engineering | Aug 2011 - Aug 2016"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Kshitij Agarwal",
-    "section": "Experience",
-    "text": "Experience\n\nScotiabank\nManager, Data Quality | June 2022 - July 2024\n\n\nPason Systems Inc.\nResearch Engineer | Aug 2018 - June 2022\n\n\nEXL (client-American Express)\nSenior Consultant | Feb 2025 - June 2025\n\n\nTuring Enterprises Inc.\nAI developer | June 2025 - Sep 2025"
   }
 ]
