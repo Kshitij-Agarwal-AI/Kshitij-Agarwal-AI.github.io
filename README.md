@@ -2,10 +2,6 @@
 
 **Data Scientist | M.Sc.**
 
-· Vancouver, BC · [Google Scholar](https://scholar.google.ca/citations?user=7zIYPH0AAAAJ&hl=en) · [LinkedIn](http://www.linkedin.com/in/kshitij-agarwal)
-
----
-
 ## SUMMARY
 
 Results-driven Data Scientist with **10+ years of experience** delivering end-to-end **AI**, **machine learning**, and **data engineering** solutions across biotech, finance, and energy. Expertise in building scalable data pipelines, predictive models, and **LLM** applications using **Python**, **SQL**, GCP, and Airflow. Skilled at bridging complex technical innovation with strategic business outcomes to drive cross-industry decision-making.
