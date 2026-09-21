@@ -10,16 +10,20 @@ Results-driven Data Scientist with **10+ years of experience** delivering end-to
 
 ## KEY ACHIEVEMENTS
 
-**Engineered Internal Data Quality Solution**
+- **Engineered Internal Data Quality Solution**
+
 Built and launched an automated Data Quality system scanning over 1M datasets at Scotiabank, saving ~$26M CAD annually by avoiding third-party vendor costs and boosting user productivity by 40%.
 
-**Co-Patented Core Algorithm & Driven Adoption**
+- **Co-Patented Core Algorithm & Driven Adoption**
+
 Co-developed and patented a real-time drilling dysfunction algorithm at Pason Systems, preventing equipment damage and driving a 10% increase in product adoption.
 
-**Expanded Market Share & Revenue Growth**
+- **Expanded Market Share & Revenue Growth**
+
 Accelerated market share by 3.5% (FY 2021–22) through continuous drilling optimization improvements and delivered technical client support that generated a 1.5% revenue boost.
 
-**Cross-Industry Product Innovation**
+- **Cross-Industry Product Innovation**
+
 Partnered with ExxonMobil to research and develop drill string optimization tools to increase drilling efficiency by 20%, while designing a Matlab-based simulator used enterprise-wide to test real-time algorithms.
 
 ---
