@@ -1,10 +1,74 @@
 ---
-title: "Data Analysis in Python"
+title: "Is there any difference between Adelie, Chinstrap and Gentoo penguins?"
 author: "Kshitij Agarwal"
 date: 2026-09-22
 ---
 
+## Introduction
+
+As you might know there are [18](https://www.birdlife.org/birds/list-of-penguin-species/) different species of penguins in the world. In this post, we will look at following three penguin species:
+
+- Adelie
+- Chinstrap
+- Gentoo
+
+![Palmer Penguins](/posts/ds-python/lter_penguins.png)
+
+We will use the `palmerpenguins` package from [pip](https://pypi.org/project/palmerpenguins/) for this analysis. This dataset is provided by [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Palmer Station Antarctica LTER.
+
+## Looking at the data
+
 ```{python}
-import sys
-sys.executable
+from palmerpenguins import load_penguins
+penguins = load_penguins()
+penguins.head()
 ```
+
+## Data Cleaning
+
+First thing we notice in this dataset is that there are some `NaN` in the dataset. These are essentially missing data from the table. For our analysis we would like to remove them. So, let's remove them.
+
+```{python}
+cleaned_penguins = penguins.dropna()
+print(f"Length of original dataset: {len(penguins)} \nLength of cleaned dataset: {len(cleaned_penguins)}")
+```
+
+As we can see that after removing all rows containing `NaN`, our number of rows have reduced to `333`. 
+
+## Data Wrangling
+
+Now, let's try to find the male-to-female ratio on this dataset by each species.
+
+```{python}
+import pandas as pd
+species_by_sex = cleaned_penguins.groupby(['species', 'sex'], as_index=False).size()
+species_by_sex = species_by_sex.pivot(index = 'species', columns = 'sex', values = 'size')
+species_by_sex['ratio'] = round(species_by_sex['male']/species_by_sex['female'], 2)
+species_by_sex
+```
+
+From this output we can see that for `Adelie` and `Chinstrap` has equal representation of male and female in the dataset. However, for the `Gentoo` species the number of males are slightly higher than number of females. It's not a problem here, we were just checking if we have an equal representation across different genders.
+
+## Plotting
+
+Now, let's see if we can segregate the three species on the basis of their flipper and bill length? You may imagine why this is required. As we will see later, this can help us decide the species of any new penguin just by looking at their flipper and bill length.
+
+```{python}
+import altair as alt
+
+chart = (
+    alt.Chart(cleaned_penguins)
+    .mark_circle(size=40)
+    .encode(
+        x=alt.X('flipper_length_mm:Q').scale(domain=(160, 240)),
+        y=alt.X('bill_length_mm:Q').scale(domain=(30, 60)),
+        color='species:N',
+        shape='species:N'
+    )
+    .interactive()
+)
+chart
+```
+
+
+From the chart we can see that, we can distinguish the three species based on their flipper and bill length. This will be useful for scenario where we don't know the species of the penguin and just their flipper and bill length. If that falls within one of these groups we can identify the species of that bird. That's cool? Right!. 
