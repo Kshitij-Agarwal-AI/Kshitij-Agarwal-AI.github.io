@@ -3,3 +3,8 @@ title: "Data Analysis in Python"
 author: "Kshitij Agarwal"
 date: 2026-09-22
 ---
+
+```{python}
+import sys
+sys.executable
+```

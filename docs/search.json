@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\nNo matching items"
+    "text": "Data Analysis in Python\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -33,6 +33,13 @@
     "title": "My first weeks in MDS",
     "section": "",
     "text": "Waterfront, Vancouver, BC, Canada\n\n\nThe first few weeks of the Master of Data Science (MDS) program have been an incredible experience. As a newcomer to Vancouver, this program is giving me the perfect opportunity to explore and settle into this beautiful city. Just recently, I took a walk along the downtown waterfront, and it was stunning. There is nothing quite like a peaceful stroll right along the edge of the Pacific Ocean to clear your mind.\nBack on campus, the MDS orientation set a great tone for the months ahead. It was structured so thoughtfully that all the new information felt manageable rather than overwhelming. The best part? Meeting my classmates. Everyone comes from such diverse backgrounds, and I am genuinely excited to learn alongside them throughout the program.\nOne thing that surprised me is just how established the MDS program is. Knowing that there is a large, active network of alumni working across so many different industries gives me a huge confidence boost. I am really looking forward to connecting with them and learning from their real-world experiences.\nHere’s to the next chapter!"
+  },
+  {
+    "objectID": "posts/ds-python/index.html",
+    "href": "posts/ds-python/index.html",
+    "title": "Data Analysis in Python",
+    "section": "",
+    "text": "import sys\nsys.executable\n\n'/Users/abrugabru/Desktop/git/Kshitij-Agarwal-AI.github.io/.venv/bin/python3'"
   },
   {
     "objectID": "about.html",
