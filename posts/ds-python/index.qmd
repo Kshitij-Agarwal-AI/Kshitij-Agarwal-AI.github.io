@@ -19,6 +19,7 @@ We will use the `palmerpenguins` package from [pip](https://pypi.org/project/pal
 ## Looking at the data
 
 ```{python}
+#| label: data-import
 from palmerpenguins import load_penguins
 penguins = load_penguins()
 penguins.head()
@@ -29,6 +30,7 @@ penguins.head()
 First thing we notice in this dataset is that there are some `NaN` in the dataset. These are essentially missing data from the table. For our analysis we would like to remove them. So, let's remove them.
 
 ```{python}
+#| label: data-cleaning
 cleaned_penguins = penguins.dropna()
 print(f"Length of original dataset: {len(penguins)} \nLength of cleaned dataset: {len(cleaned_penguins)}")
 ```
@@ -40,6 +42,7 @@ As we can see that after removing all rows containing `NaN`, our number of rows 
 Now, let's try to find the male-to-female ratio on this dataset by each species.
 
 ```{python}
+#| label: male-to-female-ratio
 import pandas as pd
 species_by_sex = cleaned_penguins.groupby(['species', 'sex'], as_index=False).size()
 species_by_sex = species_by_sex.pivot(index = 'species', columns = 'sex', values = 'size')
@@ -54,6 +57,10 @@ From this output we can see that for `Adelie` and `Chinstrap` has equal represen
 Now, let's see if we can segregate the three species on the basis of their flipper and bill length? You may imagine why this is required. As we will see later, this can help us decide the species of any new penguin just by looking at their flipper and bill length.
 
 ```{python}
+#| label: fig-penguin-flipper-vs-bill-length
+#| fig-cap: "Flipper length versus bill length of penguins by different species"
+#| fig-align: center
+
 import altair as alt
 
 chart = (
