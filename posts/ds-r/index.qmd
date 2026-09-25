@@ -1,0 +1,9 @@
+---
+title: "Is there any difference between Adelie, Chinstrap and Gentoo penguins?"
+author: "Kshitij Agarwal"
+date: 2026-09-22
+---
+
+```{r}
+getwd()
+```

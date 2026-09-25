@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Is there any difference between Adelie, Chinstrap and Gentoo penguins?\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\nNo matching items"
+    "text": "Is there any difference between Adelie, Chinstrap and Gentoo penguins?\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nIs there any difference between Adelie, Chinstrap and Gentoo penguins?\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -26,6 +26,13 @@
     "title": "Kshitij Agarwal",
     "section": "Experience",
     "text": "Experience\n\nScotiabank\nManager, Data Quality | June 2022 - July 2024\n\n\nPason Systems Inc.\nResearch Engineer | Aug 2018 - June 2022\n\n\nEXL (client-American Express)\nSenior Consultant | Feb 2025 - June 2025\n\n\nTuring Enterprises Inc.\nAI developer | June 2025 - Sep 2025"
+  },
+  {
+    "objectID": "posts/ds-r/index.html",
+    "href": "posts/ds-r/index.html",
+    "title": "Is there any difference between Adelie, Chinstrap and Gentoo penguins?",
+    "section": "",
+    "text": "getwd()\n\n[1] \"/Users/abrugabru/Desktop/git/Kshitij-Agarwal-AI.github.io/posts/ds-r\""
   },
   {
     "objectID": "posts/first-weeks/index.html",
