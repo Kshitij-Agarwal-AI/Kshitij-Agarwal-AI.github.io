@@ -2,6 +2,56 @@
 
 **Data Scientist | M.Sc.**
 
+## INTRODUCTION
+This repository belongs to Kshitij Agarwal and it contains information regarding my background, interests, and blog posts. Please read the content below to know how to configure this repository locally for you to be able to successfully render the html page that you see when you click on this [link](https://kshitij-agarwal-ai.github.io/).
+
+## STEPS TO RUN LOCALLY
+
+1. Please run the following command in your terminal to clone the repository in your local tmp directory. Please make sure your computer already has `git` installed. Otherwise, please first install git from [here](https://github.com/git-guides/install-git).
+
+```
+git clone https://github.com/Kshitij-Agarwal-AI/Kshitij-Agarwal-AI.github.io.git ~/tmp/m3-test
+```
+
+2. Change your terminal directory to the `m3-test\` directory by running this command in your terminal.
+```
+cd ~/tmp/m3-test
+```
+
+3. The repository blog posts contains both Python and R cells that requires the creation of Python virtual environments locally on your machine. To setup Python environment, you need to run following command next. Make sure you have `uv` installed in your computer before proceeding forward, otherwise, please download it from [here](https://pypi.org/project/uv/).
+
+```
+uv sync
+```
+
+This should create a `.venv` folder inside your current folder and also install all required libraries to run the python code used in this repository. You can check if `.venv` is there in your current directory by running `ls -al` in your terminal.
+
+4. Once, you have verified the installation of python virtual environment, we can procced ahead to install libraries for `R` environment. To do that, first run following command in your terminal.
+
+```
+R
+```
+
+This should open a console of `R` environment. You can confirm this by looking at terminal where you will see `>` symbol at your pointer.
+
+5. Now, to install `R` libraries, we need to run the following command in the terminal console.
+
+```
+renv::restore()
+```
+
+If prompted `Do you want to proceed? [Y/n]:` type `Y` and enter to proceed. This should install all libraries required by `R` blog post. You can now quit the `R console` by typing `q()` and hit enter. If prompted `Save workspace image? [y/n/c]:` type 'n' and enter to proceed. This should give you your terminal back.
+
+6. Finally, you can run the following command to view my site. Make sure your computer has `Quarto` already installed, otherwise, install it from [here](https://quarto.org/docs/get-started/).
+
+```
+uv run quarto preview
+```
+This should open a tab in your browser and you can see my site content. You can navigate to `Blog` to see my blogs. The cars blog uses `R` in the background and penguins blog uses `Python` in the background. 
+
+Once done, press `Control + C` to get back your terminal.
+
+
 ## SUMMARY
 
 Results-driven Data Scientist with **10+ years of experience** delivering end-to-end **AI**, **machine learning**, and **data engineering** solutions across biotech, finance, and energy. Expertise in building scalable data pipelines, predictive models, and **LLM** applications using **Python**, **SQL**, GCP, and Airflow. Skilled at bridging complex technical innovation with strategic business outcomes to drive cross-industry decision-making.
