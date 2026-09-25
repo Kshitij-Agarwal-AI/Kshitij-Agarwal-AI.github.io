@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Is there any difference between Adelie, Chinstrap and Gentoo penguins?\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nIs there any difference between Adelie, Chinstrap and Gentoo penguins?\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\nNo matching items"
+    "text": "Let’s take a look at cars\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nIs there any difference between Adelie, Chinstrap and Gentoo penguins?\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nKshitij Agarwal\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -30,9 +30,44 @@
   {
     "objectID": "posts/ds-r/index.html",
     "href": "posts/ds-r/index.html",
-    "title": "Is there any difference between Adelie, Chinstrap and Gentoo penguins?",
+    "title": "Let’s take a look at cars",
     "section": "",
-    "text": "getwd()\n\n[1] \"/Users/abrugabru/Desktop/git/Kshitij-Agarwal-AI.github.io/posts/ds-r\""
+    "text": "We will be using mtcars dataset. This is an in-built R dataset and it’s an open source public dataset. This data was extracted from 1974 Motor Trend US magazine. It comprises of several aspects of Motor cars from 1973-74 models.\n\n\n\nSource: Unsplash"
+  },
+  {
+    "objectID": "posts/ds-r/index.html#introduction",
+    "href": "posts/ds-r/index.html#introduction",
+    "title": "Let’s take a look at cars",
+    "section": "",
+    "text": "We will be using mtcars dataset. This is an in-built R dataset and it’s an open source public dataset. This data was extracted from 1974 Motor Trend US magazine. It comprises of several aspects of Motor cars from 1973-74 models.\n\n\n\nSource: Unsplash"
+  },
+  {
+    "objectID": "posts/ds-r/index.html#dataset",
+    "href": "posts/ds-r/index.html#dataset",
+    "title": "Let’s take a look at cars",
+    "section": "Dataset",
+    "text": "Dataset\nLet’s take a look at the dataset to see what all columns we have.\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nAs we can see, the mtcars have a lot of data belonging to several car models from 1973. Full details of each column can be found here"
+  },
+  {
+    "objectID": "posts/ds-r/index.html#most-fuel-efficient-car",
+    "href": "posts/ds-r/index.html#most-fuel-efficient-car",
+    "title": "Let’s take a look at cars",
+    "section": "Most fuel efficient car",
+    "text": "Most fuel efficient car\nLet’s see which car has the highest fuel efficiency among the listed cars.\n\nlibrary(tidyverse)\nmtcars |&gt;\n  filter(mpg == max(mpg)) |&gt;\n  select(mpg)\n\n                mpg\nToyota Corolla 33.9\n\n\nFrom this analysis, we can see Toyota Corolla has the highest fuel efficiency of 33.9 miles per gallon, which is roughly equal to 14.41 Km/l."
+  },
+  {
+    "objectID": "posts/ds-r/index.html#number-of-automatic-and-manual-transmission-cars",
+    "href": "posts/ds-r/index.html#number-of-automatic-and-manual-transmission-cars",
+    "title": "Let’s take a look at cars",
+    "section": "Number of automatic and manual transmission cars",
+    "text": "Number of automatic and manual transmission cars\nNow, let’s see how many cars have automatic transmission versus manual transmission.\n\nmtcars |&gt;\n  group_by(am) |&gt;\n  summarise(no_of_cars = n()) |&gt;\n  mutate(am = as.character(am),\n         am = case_when(am == \"0\" ~ \"Manual\",\n                        am == \"1\" ~ \"Automatic\")) |&gt;\n  rename(Transmission_type = am)\n\n# A tibble: 2 × 2\n  Transmission_type no_of_cars\n  &lt;chr&gt;                  &lt;int&gt;\n1 Manual                    19\n2 Automatic                 13\n\n\nAs we can see that in 1973, there were 19 Manual transmission cars compared to 13 automatic cars. Seems like, people at that time preffered more Manual cars over automatic onces. Or it may be the case that Automatic technology was not that advanced in 1973. What do you think?"
+  },
+  {
+    "objectID": "posts/ds-r/index.html#horsepower-vs-fuel-efficiency",
+    "href": "posts/ds-r/index.html#horsepower-vs-fuel-efficiency",
+    "title": "Let’s take a look at cars",
+    "section": "Horsepower vs Fuel efficiency",
+    "text": "Horsepower vs Fuel efficiency\nLet’s try to see if there is any relation between Horsepower of the car and it’s fuel efficiency?\n\nplot(mtcars$hp, \n     mtcars$mpg,\n     main = \"Horsepower Vs Fuel Efficiency\",\n     xlab = \"Horsepower (hp)\",\n     ylab = \"Fuel Efficiency (mpg)\",\n     col = 'blue',\n     pch = 19)\n\n\n\n\nScatter plot between MT Cars horsepower and Fuel Efficiency\n\n\n\n\nJust by looking at the plot, we can see that as horsepower is increasing the fuel efficiency of the car is decreasing. This is also confirmed by looking at the correlation between these two variables. The correlation coefficient between hp and mpg is -0.78, which is a high negative value confirms our initial hypothesis between these two variables.\nI hope you like this short analysis on cars and I encourage you to try more on your own with this amazing mtcars dataset and in a wonderful world of R."
   },
   {
     "objectID": "posts/first-weeks/index.html",
@@ -46,14 +81,14 @@
     "href": "posts/ds-python/index.html",
     "title": "Is there any difference between Adelie, Chinstrap and Gentoo penguins?",
     "section": "",
-    "text": "As you might know there are 18 different species of penguins in the world. In this post, we will look at following three penguin species:\n\nAdelie\nChinstrap\nGentoo\n\n\n\n\nPalmer Penguins\n\n\nWe will use the palmerpenguins package from pip for this analysis. This dataset is provided by Palmer Penguins, Palmer Station Antarctica LTER."
+    "text": "As you might know there are 18 different species of penguins in the world. In this post, we will look at following three penguin species:\n\nAdelie\nChinstrap\nGentoo\n\n\n\n\nSource: Palmer Penguins\n\n\nWe will use the palmerpenguins package from pip for this analysis. This dataset is provided by Palmer Penguins, Palmer Station Antarctica LTER."
   },
   {
     "objectID": "posts/ds-python/index.html#introduction",
     "href": "posts/ds-python/index.html#introduction",
     "title": "Is there any difference between Adelie, Chinstrap and Gentoo penguins?",
     "section": "",
-    "text": "As you might know there are 18 different species of penguins in the world. In this post, we will look at following three penguin species:\n\nAdelie\nChinstrap\nGentoo\n\n\n\n\nPalmer Penguins\n\n\nWe will use the palmerpenguins package from pip for this analysis. This dataset is provided by Palmer Penguins, Palmer Station Antarctica LTER."
+    "text": "As you might know there are 18 different species of penguins in the world. In this post, we will look at following three penguin species:\n\nAdelie\nChinstrap\nGentoo\n\n\n\n\nSource: Palmer Penguins\n\n\nWe will use the palmerpenguins package from pip for this analysis. This dataset is provided by Palmer Penguins, Palmer Station Antarctica LTER."
   },
   {
     "objectID": "posts/ds-python/index.html#looking-at-the-data",

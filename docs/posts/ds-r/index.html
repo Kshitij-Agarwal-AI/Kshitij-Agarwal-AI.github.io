@@ -9,7 +9,7 @@
 <meta name="author" content="Kshitij Agarwal">
 <meta name="dcterms.date" content="2026-09-22">
 
-<title>Is there any difference between Adelie, Chinstrap and Gentoo penguins? – Kshitij Agarwal</title>
+<title>Let’s take a look at cars – Kshitij Agarwal</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -155,15 +155,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#most-fuel-efficient-car" id="toc-most-fuel-efficient-car" class="nav-link" data-scroll-target="#most-fuel-efficient-car">Most fuel efficient car</a></li>
+  <li><a href="#number-of-automatic-and-manual-transmission-cars" id="toc-number-of-automatic-and-manual-transmission-cars" class="nav-link" data-scroll-target="#number-of-automatic-and-manual-transmission-cars">Number of automatic and manual transmission cars</a></li>
+  <li><a href="#horsepower-vs-fuel-efficiency" id="toc-horsepower-vs-fuel-efficiency" class="nav-link" data-scroll-target="#horsepower-vs-fuel-efficiency">Horsepower vs Fuel efficiency</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Is there any difference between Adelie, Chinstrap and Gentoo penguins?</h1>
+<h1 class="title">Let’s take a look at cars</h1>
 </div>
 
 
@@ -192,14 +202,94 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>We will be using <a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars">mtcars dataset</a>. This is an in-built R dataset and it’s an open source public dataset. This data was extracted from 1974 Motor Trend US magazine. It comprises of several aspects of Motor cars from 1973-74 models.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../posts/ds-r/cars.jpg" class="img-fluid figure-img"></p>
+<figcaption>Source: <a href="https://unsplash.com/@olav_tvedt">Unsplash</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>Let’s take a look at the dataset to see what all columns we have.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/Users/abrugabru/Desktop/git/Kshitij-Agarwal-AI.github.io/posts/ds-r"</code></pre>
+<pre><code>                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
 </div>
 </div>
+<p>As we can see, the mtcars have a lot of data belonging to several car models from 1973. Full details of each column can be found <a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars">here</a></p>
+</section>
+<section id="most-fuel-efficient-car" class="level2">
+<h2 class="anchored" data-anchor-id="most-fuel-efficient-car">Most fuel efficient car</h2>
+<p>Let’s see which car has the highest fuel efficiency among the listed cars.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(mpg <span class="sc">==</span> <span class="fu">max</span>(mpg)) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mpg)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mpg
+Toyota Corolla 33.9</code></pre>
+</div>
+</div>
+<p>From this analysis, we can see Toyota Corolla has the highest fuel efficiency of 33.9 miles per gallon, which is roughly equal to 14.41 Km/l.</p>
+</section>
+<section id="number-of-automatic-and-manual-transmission-cars" class="level2">
+<h2 class="anchored" data-anchor-id="number-of-automatic-and-manual-transmission-cars">Number of automatic and manual transmission cars</h2>
+<p>Now, let’s see how many cars have automatic transmission versus manual transmission.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(am) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">no_of_cars =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">am =</span> <span class="fu">as.character</span>(am),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">am =</span> <span class="fu">case_when</span>(am <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"Manual"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                        am <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"Automatic"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Transmission_type =</span> am)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  Transmission_type no_of_cars
+  &lt;chr&gt;                  &lt;int&gt;
+1 Manual                    19
+2 Automatic                 13</code></pre>
+</div>
+</div>
+<p>As we can see that in 1973, there were <code>19</code> Manual transmission cars compared to <code>13</code> automatic cars. Seems like, people at that time preffered more Manual cars over automatic onces. Or it may be the case that Automatic technology was not that advanced in 1973. What do you think?</p>
+</section>
+<section id="horsepower-vs-fuel-efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="horsepower-vs-fuel-efficiency">Horsepower vs Fuel efficiency</h2>
+<p>Let’s try to see if there is any relation between Horsepower of the car and it’s fuel efficiency?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mtcars<span class="sc">$</span>hp, </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>     mtcars<span class="sc">$</span>mpg,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Horsepower Vs Fuel Efficiency"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Horsepower (hp)"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Fuel Efficiency (mpg)"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">'blue'</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/Horsepower Vs fuel efficieny-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Scatter plot between MT Cars horsepower and Fuel Efficiency</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Just by looking at the plot, we can see that as horsepower is increasing the fuel efficiency of the car is decreasing. This is also confirmed by looking at the correlation between these two variables. The correlation coefficient between <code>hp</code> and <code>mpg</code> is -0.78, which is a high negative value confirms our initial hypothesis between these two variables.</p>
+<p>I hope you like this short analysis on cars and I encourage you to try more on your own with this amazing <code>mtcars</code> dataset and in a wonderful world of <code>R</code>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

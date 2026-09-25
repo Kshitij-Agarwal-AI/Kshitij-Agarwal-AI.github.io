@@ -12,7 +12,7 @@ As you might know there are [18](https://www.birdlife.org/birds/list-of-penguin-
 - Chinstrap
 - Gentoo
 
-![Palmer Penguins](/posts/ds-python/lter_penguins.png)
+![Source: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/)](/posts/ds-python/lter_penguins.png)
 
 We will use the `palmerpenguins` package from [pip](https://pypi.org/project/palmerpenguins/) for this analysis. This dataset is provided by [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Palmer Station Antarctica LTER.
 

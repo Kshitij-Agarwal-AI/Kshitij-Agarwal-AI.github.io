@@ -1,9 +1,72 @@
 ---
-title: "Is there any difference between Adelie, Chinstrap and Gentoo penguins?"
+title: "Let's take a look at cars"
 author: "Kshitij Agarwal"
 date: 2026-09-22
 ---
 
-```{r}
-getwd()
+## Introduction
+
+We will be using [mtcars dataset](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars). This is an in-built R dataset and it's an open source public dataset. This data was extracted from 1974 Motor Trend US magazine. It comprises of several aspects of Motor cars from 1973-74 models.
+
+![Source: [Unsplash](https://unsplash.com/@olav_tvedt)](/posts/ds-r/cars.jpg)
+
+## Dataset
+Let's take a look at the dataset to see what all columns we have.
+
+```{r Dataset}
+head(mtcars)
 ```
+As we can see, the mtcars have a lot of data belonging to several car models from 1973. Full details of each column can be found [here](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars)
+
+## Most fuel efficient car
+
+Let's see which car has the highest fuel efficiency among the listed cars.
+
+```{r Fuel Efficiency}
+#| message: false
+#| warning: false
+library(tidyverse)
+mtcars |>
+  filter(mpg == max(mpg)) |>
+  select(mpg)
+```
+
+From this analysis, we can see Toyota Corolla has the highest fuel efficiency of 33.9 miles per gallon, which is roughly equal to `r round(33.9*0.425144, 2)` Km/l.
+
+## Number of automatic and manual transmission cars
+
+Now, let's see how many cars have automatic transmission versus manual transmission.
+
+```{r Auto vs Manual}
+#| message: false
+#| warning: false
+
+mtcars |>
+  group_by(am) |>
+  summarise(no_of_cars = n()) |>
+  mutate(am = as.character(am),
+         am = case_when(am == "0" ~ "Manual",
+                        am == "1" ~ "Automatic")) |>
+  rename(Transmission_type = am)
+```
+
+As we can see that in 1973, there were `19` Manual transmission cars compared to `13` automatic cars. Seems like, people at that time preffered more Manual cars over automatic onces. Or it may be the case that Automatic technology was not that advanced in 1973. What do you think?
+
+## Horsepower vs Fuel efficiency
+
+Let's try to see if there is any relation between Horsepower of the car and it's fuel efficiency?
+
+```{r Horsepower Vs fuel efficieny}
+#| fig-cap: "Scatter plot between MT Cars horsepower and Fuel Efficiency"
+plot(mtcars$hp, 
+     mtcars$mpg,
+     main = "Horsepower Vs Fuel Efficiency",
+     xlab = "Horsepower (hp)",
+     ylab = "Fuel Efficiency (mpg)",
+     col = 'blue',
+     pch = 19)
+```
+
+Just by looking at the plot, we can see that as horsepower is increasing the fuel efficiency of the car is decreasing. This is also confirmed by looking at the correlation between these two variables. The correlation coefficient between `hp` and `mpg` is `r round(cor(mtcars$hp,mtcars$mpg), 2)`, which is a high negative value confirms our initial hypothesis between these two variables.
+
+I hope you like this short analysis on cars and I encourage you to try more on your own with this amazing `mtcars` dataset and in a wonderful world of `R`.
