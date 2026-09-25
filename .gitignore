@@ -3,3 +3,5 @@
 .DS_Store
 .Rproj.user
 site_libs/
+.venv/
+_site/
